@@ -10,6 +10,7 @@ Page({
     showTime:false,
     time: (new Date()).toLocaleString(),
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    inputText:'Hello World',
     msList:[
       'Racing car sprays burning fuel into crowd.',
       'Japanese princess to wed commoner.',
@@ -60,7 +61,8 @@ Page({
       hasUserInfo: true
     })
   },
-  toggleTimeShow:function(){
+  toggleTimeShow:function(e){
+    // console.log('e',e);
     const show=this.data.showTime;
     this.setData({showTime:!show})
   }

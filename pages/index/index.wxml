@@ -5,14 +5,16 @@
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <input model:value="{{inputText}}" type="text"/>
     </block>
   </view>
   <view class="usermotto">
-    <block wx:for="{{msList}}">
+    <!-- 列表循环 -->
+    <!-- <block wx:for="{{msList}}">
       <view>{{index}}:{{item}}</view>
-    </block>
+    </block> -->
     <text wx:if="{{showTime}}">现在是：{{time}}</text>
-    <text wx:else>点击按钮</text>
-    <button bindtap="toggleTimeShow">{{showTime?'隐藏':'显示'}}</button>
+    <text wx:else></text>
+    <button bindtap="toggleTimeShow">{{showTime?'隐藏':'查看时间'}}</button>
   </view>
 </view>
